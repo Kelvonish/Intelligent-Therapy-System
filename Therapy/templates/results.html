@@ -1,0 +1,139 @@
+{% extends 'base.html' %} {% block menu %}
+<li class="nav-item   ">
+    <a class="nav-link" href="{% url 'home'%}">
+        <i class="material-icons">dashboard</i>
+        <p>Home</p>
+    </a>
+</li>
+<li class="nav-item ">
+    <a class="nav-link" href="{% url 'diagnose'%}">
+        <i class="material-icons">content_paste</i>
+        <p>Diagnosis</p>
+    </a>
+</li>
+<li class="nav-item  ">
+    <a class="nav-link" href="{% url 'chat'%}">
+        <i class="material-icons">bubble_chart</i>
+        <p>Talk to Nishbot</p>
+    </a>
+</li>
+
+{% endblock menu %} {% block content %}
+<div class="row mt-0">
+    <div class=col-8></div>
+    <div class="col-4 mb-1">
+        <div class="bg-white rounded-lg p-5 shadow ">
+            <h2 class="h6 font-weight-bold text-center mb-4">Overall progress</h2>
+
+            <!-- Progress bar 1 -->
+            <div class="progress mx-auto" data-value='80'>
+                <span class="progress-left">
+                        <span class="progress-bar border-primary"></span>
+                </span>
+                <span class="progress-right">
+                        <span class="progress-bar border-primary"></span>
+                </span>
+                <div class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
+                    {% if data %}
+                    <div class="h2 font-weight-bold">{{data.result}}<sup class="small">%</sup></div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="content mt-0">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-primary">
+                        <h4 class="card-title ">Simple Table</h4>
+                        <p class="card-category"> Here is a subtitle for this table</p>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <style>
+                .progress {
+                    width: 150px;
+                    height: 150px;
+                    background: none;
+                    position: relative;
+                }
+                
+                .progress::after {
+                    content: "";
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 50%;
+                    border: 6px solid #eee;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+                
+                .progress>span {
+                    width: 50%;
+                    height: 100%;
+                    overflow: hidden;
+                    position: absolute;
+                    top: 0;
+                    z-index: 1;
+                }
+                
+                .progress .progress-left {
+                    left: 0;
+                }
+                
+                .progress .progress-bar {
+                    width: 100%;
+                    height: 100%;
+                    background: none;
+                    border-width: 6px;
+                    border-style: solid;
+                    position: absolute;
+                    top: 0;
+                }
+                
+                .progress .progress-left .progress-bar {
+                    left: 100%;
+                    border-top-right-radius: 80px;
+                    border-bottom-right-radius: 80px;
+                    border-left: 0;
+                    -webkit-transform-origin: center left;
+                    transform-origin: center left;
+                }
+                
+                .progress .progress-right {
+                    right: 0;
+                }
+                
+                .progress .progress-right .progress-bar {
+                    left: -100%;
+                    border-top-left-radius: 80px;
+                    border-bottom-left-radius: 80px;
+                    border-right: 0;
+                    -webkit-transform-origin: center right;
+                    transform-origin: center right;
+                }
+                
+                .progress .progress-value {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+                
+                .rounded-lg {
+                    border-radius: 1rem;
+                }
+                
+                .text-gray {
+                    color: #aaa;
+                }
+            </style>
+            {% endblock content %}

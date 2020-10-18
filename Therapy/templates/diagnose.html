@@ -1,0 +1,459 @@
+{% extends 'base.html' %} {% block menu %}
+<li class="nav-item   ">
+    <a class="nav-link" href="{% url 'home'%}">
+        <i class="material-icons">dashboard</i>
+        <p>Home</p>
+    </a>
+</li>
+<li class="nav-item active">
+    <a class="nav-link" href="{% url 'diagnose'%}">
+        <i class="material-icons">content_paste</i>
+        <p>Diagnosis</p>
+    </a>
+</li>
+<li class="nav-item  ">
+    <a class="nav-link" href="{% url 'chat'%}">
+        <i class="material-icons">bubble_chart</i>
+        <p>Talk to Nishbot</p>
+    </a>
+</li>
+
+{% endblock menu %} {% block content %}
+
+<style type="text/css">
+
+</style>
+<form method="POST"> {% csrf_token %}
+
+    <div class="row m-5">
+        <div class="col-lg-6 col-md-12">
+            <div class="card">
+                <div class="card-header card-header-tabs card-header-primary">
+                    <h5> Qn 1 : Little interest or pleasure in doing things
+                        <h5>
+                </div>
+                <div class="card-body">
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="profile">
+                            <table class="table">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+        <input type="radio" class="form-check-inpu" name="1" id="optionsRadios1" value="10" checked>
+        Not at all
+      </label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+        <input type="radio" class="form-check-inpu" name="1" id="optionsRadios2" value="20">
+        Several days
+      </label>
+                                            </div>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+        <input type="radio" class="form-check-inpu" name="1" id="optionsRadios3" value="30">
+        More than half of the days
+      </label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+        <input type="radio" class="form-check-inpu" name="1" id="optionsRadios4" value="40">
+        Nearly every day
+      </label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- qn 2    -->
+
+        <div class="col-lg-6 col-md-12">
+            <div class="card">
+                <div class="card-header card-header-tabs card-header-primary">
+                    <h5> Qn 2 : Feeling down or depressed or hopeless
+                        <h5>
+                </div>
+                <div class="card-body">
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="profile">
+                            <table class="table">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+        <input type="radio" class="" name="2" id="optionsRadios1" value="10" checked>
+        Not at all
+      </label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+        <input type="radio" class="" name="2" id="optionsRadios2" value="20">
+        Several days
+      </label>
+                                            </div>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+        <input type="radio" class="" name="2" id="optionsRadios3" value="30">
+        More than half of the days
+      </label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+        <input type="radio" class="" name="2" id="optionsRadios4" value="40">
+        Nearly every day
+      </label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="row m-5">
+        <div class="col-lg-6 col-md-12">
+            <div class="card">
+                <div class="card-header card-header-tabs card-header-primary">
+                    <h5> Qn 3 : Trouble sleeping or sleeping too much
+                        <h5>
+                </div>
+                <div class="card-body">
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="profile">
+                            <table class="table">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+        <input type="radio" class="" name="3" id="optionsRadios1" value="10" checked>
+        Not at all
+      </label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+        <input type="radio" class="" name="3" id="optionsRadios2" value="20">
+        Several days
+      </label>
+                                            </div>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+        <input type="radio" class="" name="3" id="optionsRadios3" value="30">
+        More than half of the days
+      </label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+        <input type="radio" class="" name="3" id="optionsRadios4" value="40">
+        Nearly every day
+      </label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- qn 2    -->
+
+        <div class="col-lg-6 col-md-12">
+            <div class="card">
+                <div class="card-header card-header-tabs card-header-primary">
+                    <h5> Qn 4 : Poor apetite or over-eating
+                        <h5>
+                </div>
+                <div class="card-body">
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="profile">
+                            <table class="table">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+        <input type="radio" class="" name="4" id="optionsRadios1" value="10" checked>
+        Not at all
+      </label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+        <input type="radio" class="" name="4" id="optionsRadios2" value="20">
+        Several days
+      </label>
+                                            </div>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+        <input type="radio" class="" name="4" id="optionsRadios3" value="30">
+        More than half of the days
+      </label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+        <input type="radio" class="" name="4" id="optionsRadios4" value="40">
+        Nearly every day
+      </label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="row m-5">
+        <div class="col-lg-6 col-md-12">
+            <div class="card">
+                <div class="card-header card-header-tabs card-header-primary">
+                    <h5> Qn 5 : Trouble concentrating on things, such as reading the newspaper or watching television
+                        <h5>
+                </div>
+                <div class="card-body">
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="profile">
+                            <table class="table">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+        <input type="radio" class="" name="5" id="optionsRadios1" value="10" checked>
+        Not at all
+      </label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+        <input type="radio" class="" name="5" id="optionsRadios2" value="20">
+        Several days
+      </label>
+                                            </div>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+        <input type="radio" class="" name="5" id="optionsRadios3" value="30">
+        More than half of the days
+      </label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+        <input type="radio" class="" name="5" id="optionsRadios4" value="40">
+        Nearly every day
+      </label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- qn 2    -->
+
+        <div class="col-lg-6 col-md-12">
+            <div class="card">
+                <div class="card-header card-header-tabs card-header-primary">
+                    <h5> Qn 6 : Thoughts that you would be better off dead, or of hurting yourself
+                        <h5>
+                </div>
+                <div class="card-body">
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="profile">
+                            <table class="table">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+        <input type="radio" class="" name="6" id="optionsRadios1" value="10" checked>
+        Not at all
+      </label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+        <input type="radio" class="" name="6" id="optionsRadios2" value="20">
+        Several days
+      </label>
+                                            </div>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+        <input type="radio" class="" name="6" id="optionsRadios3" value="30">
+        More than half of the days
+      </label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+        <input type="radio" class="" name="6" id="optionsRadios4" value="40">
+        Nearly every day
+      </label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="row m-5">
+        <div class="col-lg-6 col-md-12">
+            <div class="card">
+                <div class="card-header card-header-tabs card-header-primary">
+                    <h5> Qn 7 : Feeling bad about yourself - or that you are a failure or have let yourself or your family down
+                        <h5>
+                </div>
+                <div class="card-body">
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="profile">
+                            <table class="table">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+        <input type="radio" class="" name="7" id="optionsRadios1" value="10" checked>
+        Not at all
+      </label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+        <input type="radio" class="" name="7" id="optionsRadios2" value="20">
+        Several days
+      </label>
+                                            </div>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+        <input type="radio" class="" name="7" id="optionsRadios3" value="30">
+        More than half of the days
+      </label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+        <input type="radio" class="" name="7" id="optionsRadios4" value="40">
+        Nearly every day
+      </label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- qn 2    -->
+
+
+
+    </div>
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <input type="submit" value="Analyze" class="btn btn-primary pull-center form-control" />
+        </div>
+    </div>
+</form>
+{% endblock content %}

@@ -1,0 +1,209 @@
+{% extends 'base.html' %} {% block menu %}
+<li class="nav-item   ">
+    <a class="nav-link" href="{% url 'home'%}">
+        <i class="material-icons">dashboard</i>
+        <p>Home</p>
+    </a>
+</li>
+<li class="nav-item ">
+    <a class="nav-link" href="{% url 'diagnose'%}">
+        <i class="material-icons">content_paste</i>
+        <p>Diagnosis</p>
+    </a>
+</li>
+<li class="nav-item active ">
+    <a class="nav-link" href="{% url 'chat'%}">
+        <i class="material-icons">bubble_chart</i>
+        <p>Talk to Nishbot</p>
+    </a>
+</li>
+
+{% endblock menu %} {% block content %}
+
+<div class="content mt-1">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header card-header-primary">
+                        <h4 class="card-title">Talk to Nish-bot</h4>
+                        <p class="card-category">It is a trained chatbot that answers all your question about depression</p>
+                    </div>
+                    <div class="card-body msg_card_body" id="bottom" onload="chat()">
+                        {% if messages %} {% for m in messages %}
+                        <div class="alert-danger">{{m}}</div>
+                        {% endfor %} {% endif %} {% if data %} {% for message in data %}
+                        <div>
+                            <div class="d-flex justify-content-end mb-0">
+                                <div class="msg_cotainer">
+                                    {{message.question}}
+
+                                </div>
+                                <div class="img_cont_msg">
+                                    <img src="https://img.icons8.com/plasticine/2x/user.png" class="rounded-circle user_img_msg">
+                                </div>
+                            </div>
+                            <div>
+                                <span class="d-flex justify-content-end mb-4"> <small>{{message.created}}</small> </span></div>
+                        </div>
+                        <div>
+                            <div class="d-flex justify-content-start mb-0">
+                                <div class="img_cont_msg">
+                                    <img src="https://images.idgesg.net/images/article/2018/02/artificial_intelligence_ai_virtual_assistant_robot_chatbot_thinkstock_856909876-100749925-large.3x2.jpg" class="rounded-circle user_img_msg">
+                                </div>
+                                <div class="msg_cotainer_send">
+                                    {{message.response}}
+                                </div>
+                            </div>
+                            <div>
+                                <span class="d-flex justify-content-start mb-4"> <small>{{message.created}}</small> </span></div>
+                        </div>
+
+                        {% endfor %} {% endif %}
+                    </div>
+
+                    <div class="">
+                        <form method="POST"> {% csrf_token %}
+                            <input type="text" class="form-control" name="question" placeholder="Type your question" autocomplete="false">
+                            <button type="submit" class="btn btn-primary pull-right">Ask</button>
+                            <div class="clearfix">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    window.onload = function() {
+        chat();
+    };
+
+    function chat() {
+        var chatHistory = document.getElementById("bottom");
+        chatHistory.scrollTop = chatHistory.scrollHeight;
+    }
+</script>
+
+<style rel="text/stylesheets">
+    .chat {
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+    
+    .msg_card_body {
+        overflow-y: auto;
+        height: 70vh;
+        flex-direction: column-reverse;
+    }
+    
+    .container {
+        align-content: center;
+    }
+    
+    .active {
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+    
+    .user_img {
+        height: 70px;
+        width: 70px;
+        border: 1.5px solid #f5f6fa;
+    }
+    
+    .user_img_msg {
+        height: 40px;
+        width: 40px;
+        border: 1.5px solid #f5f6fa;
+    }
+    
+    .img_cont {
+        position: relative;
+        height: 70px;
+        width: 70px;
+    }
+    
+    .img_cont_msg {
+        height: 40px;
+        width: 40px;
+    }
+    
+    .user_info {
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-left: 15px;
+    }
+    
+    .user_info span {
+        font-size: 20px;
+        color: white;
+    }
+    
+    .user_info p {
+        font-size: 10px;
+        color: rgba(255, 255, 255, 0.6);
+    }
+    
+    .msg_cotainer {
+        margin-top: auto;
+        margin-left: 10px;
+        border-radius: 25px;
+        background-color: #82ccdd;
+        padding: 10px;
+        position: relative;
+    }
+    
+    .msg_cotainer_send {
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-right: 10px;
+        border-radius: 25px;
+        background-color: #78e08f;
+        padding: 10px;
+        position: relative;
+    }
+    
+    .msg_time {
+        position: absolute;
+        left: 0;
+        bottom: -15px;
+        color: black;
+        font-size: 10px;
+    }
+    
+    .msg_time_send {
+        position: absolute;
+        right: 0;
+        bottom: -15px;
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 10px;
+    }
+    
+    .msg_head {
+        position: relative;
+    }
+    
+    #action_menu_btn {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        color: white;
+        cursor: pointer;
+        font-size: 20px;
+    }
+    
+    .action_menu {
+        z-index: 1;
+        position: absolute;
+        padding: 15px 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border-radius: 15px;
+        top: 30px;
+        right: 15px;
+        display: none;
+    }
+</style>
+{% endblock content %}

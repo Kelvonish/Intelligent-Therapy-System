@@ -1,0 +1,44 @@
+{% extends 'base.html' %} {% block menu %}
+<li class="nav-item  active ">
+    <a class="nav-link" href="{% url 'home'%}">
+        <i class="material-icons">dashboard</i>
+        <p>Home</p>
+    </a>
+</li>
+<li class="nav-item ">
+    <a class="nav-link" href="{% url 'diagnose'%}">
+        <i class="material-icons">content_paste</i>
+        <p>Diagnosis</p>
+    </a>
+</li>
+<li class="nav-item  ">
+    <a class="nav-link" href="{% url 'chat'%}">
+        <i class="material-icons">bubble_chart</i>
+        <p>Talk to Nishbot</p>
+    </a>
+</li>
+
+{% endblock menu %} {% block content %}
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img class="d-block w-100" src="..." alt="First slide">
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100" src="..." alt="Second slide">
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100" src="..." alt="Third slide">
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+
+{% endblock content %}

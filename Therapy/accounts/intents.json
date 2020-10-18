@@ -1,0 +1,157 @@
+{
+    "intents": [{
+            "tag": "greeting",
+            "patterns": [
+                "Hi",
+                "How are you",
+                "Is anyone there?",
+                "Hello",
+                "Good day",
+                "Whats up"
+            ],
+            "responses": [
+                "Hello!",
+                "Good to see you again!",
+                "Hi there, how can I help?"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "goodbye",
+            "patterns": [
+                "cya",
+                "See you later",
+                "Goodbye",
+                "I am Leaving",
+                "Have a Good day"
+            ],
+            "responses": [
+                "Sad to see you go :(",
+                "Talk to you later",
+                "Goodbye!"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "age",
+            "patterns": [
+                "how old",
+                "how old are you",
+                "what is your age",
+                "how old are you",
+                "age?"
+            ],
+            "responses": [
+                "I was created by kelvin in 2020",
+                "I do not age, i am a machine"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "name",
+            "patterns": [
+                "what is your name",
+                "what should I call you",
+                "whats your name?"
+            ],
+            "responses": [
+                "You can call me nishbot.",
+                "I'm nishbot!",
+                "Nishbot, your solution to depression"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "definition",
+            "patterns": [
+                "what is depression",
+                "depression defination",
+                "meaning of depression"
+            ],
+            "responses": [
+                "A mental health disorder characterised by persistently depressed mood or loss of interest in activities,causing significant impairment in daily life.",
+                "feelings of severe despondency and dejection.",
+                "Depression is a mood disorder that causes a persistent feeling of sadness and loss of interest and can interfere with your daily functioning."
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "symptom",
+            "patterns": [
+                "what are symptoms of depression",
+                "symptoms of depression",
+                "signs and symptoms of depression"
+            ],
+            "responses": [
+                "Mood: anxiety, apathy, general discontent, guilt, hopelessness, loss of interest, loss of interest or pleasure in activities, mood swings, or sadness\r\n\tBehavioural: agitation, excessive crying, irritability, restlessness, or social isolation\r\n\tSleep: early awakening, excess sleepiness, insomnia, or restless sleep\r\n\tWhole body: excessive hunger, fatigue, or loss of appetite\r\n\tCognitive: lack of concentration, slowness in activity, or thoughts of suicide\r\n\tWeight: weight gain or weight loss\r\n\tAlso common: poor appetite or rumination",
+                "Sad, empty, or anxious. It will continue over time without getting better or going away.\r\n\r\n\tHelpless, worthless, or guilty. You may feel bad about yourself or your life, or think a lot about losses or failures.\r\n\r\n\tHopeless. You may be pessimistic or believe that nothing good will ever happen. You may even think about suicide.\r\n\r\n\tIrritable. You may get restless or more cranky than usual.\r\n\r\n\tLess interest in activities. Hobbies or games you usually enjoy may not appeal to you. You may have little or no desire to eat or have sex.\r\n\r\n\tLess energetic. You may feel extremely tired or think more slowly. Daily routines and tasks may seem too hard to manage.\r\n\r\n\tTrouble concentrating. It could be tough to focus. Simple things like reading a newspaper or watching TV may be hard. You may have trouble remembering details. It might seem overwhelming to make a decision, whether it's big or small.\r\n\r\n\tChanges in the way you sleep. You may wake up too early or have trouble falling asleep. The opposite can also happen. You may sleep much longer than usual.\r\n\t\r\n\tChanges in appetite. You may overeat or not feel hungry. Depression often leads to weight gain or weight loss."
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "options",
+            "patterns": [
+                "How you could help me?",
+                "What you can do?",
+                "What help you provide?",
+                "What support is offered",
+                "Help"
+            ],
+            "responses": [
+                "Ask about depressions symptoms or Causes of depression",
+                "I can tell you about all about depression"
+            ],
+            "context_set": [
+                ""
+            ]
+        },
+        {
+            "tag": "types",
+            "patterns": [
+                "What are types of depression",
+                "types of depression",
+                "different depression types"
+            ],
+            "responses": [
+                "Clinical depression A mental health disorder characterized by persistently depressed mood or loss of interest in activities, causing significant impairment in daily life.\r\nPersistent depressive disorder\r\nA mild but long-term form of depression.\r\nBipolar disorder\r\nA disorder associated with episodes of mood swings ranging from depressive lows to manic highs.\r\nBipolar II disorder\r\nA less severe type of bipolar disorder characterised by depressive and hypomanic episodes.\r\nPostnatal depression\r\nDepression that occurs after childbirth.\",\r\n\"Major Depression.\r\nPersistent Depressive Disorder.\r\nBipolar Disorder.\r\nSeasonal Affective Disorder (SAD)\r\nPsychotic Depression.\r\nPeripartum (Postpartum) Depression.\r\nPremenstrual Dysphoric Disorder (PMDD)\r\nSituational' Depression.",
+                "Major Depression.\r\nPersistent Depressive Disorder.\r\nBipolar Disorder.\r\nSeasonal Affective Disorder (SAD)\r\nPsychotic Depression.\r\nPeripartum (Postpartum) Depression.\r\nPremenstrual Dysphoric Disorder (PMDD)\r\nSituational Depression."
+            ],
+            "context_set": [
+                ""
+            ]
+        },
+        {
+            "tag": "thanks",
+            "patterns": [
+                "Thanks",
+                "Thank you",
+                "That's helpful"
+            ],
+            "responses": [
+                "Happy to help!",
+                "Any time!",
+                "My pleasure"
+            ],
+            "context_set": [
+                ""
+            ]
+        },
+        {
+            "tag": "treatment",
+            "patterns": [
+                "What is the treatment for depression",
+                "home remedy for depression",
+                "How to prevent depression",
+                "reduce depression",
+                "avoid depression"
+            ],
+            "responses": [
+                "The mainstay of treatment is usually medication, talk therapy or a combination of the two. Increasingly, research suggests that these treatments may normalise brain changes associated with depression.\r\nTherapy\r\nCognitive behavioral therapy, Behavioural therapy and Psychotherapy\r\nMedications\r\nSSRIs, Antidepressant, Anxiolytic and Antipsychotic\r\nMedical procedure\r\nElectroconvulsive therapy",
+                "Support - This can range from discussing practical solutions and possible causes to educating family members.\r\n\r\nPsychotherapy: Also known as talking therapy, some options include one-to-one counseling and cognitive behavioral therapy (CBT).\r\n\r\nDrug treatment: A doctor may prescribe antidepressants.\r\n\r\nMedication\r\nAntidepressants can help treat moderate-to-severe depression.\r\n\r\nSeveral classes of antidepressants are available:\r\nselective serotonin reuptake inhibitors (SSRIs)\r\nmonoamine oxidase inhibitors (MAOIs)\r\ntricyclic antidepressants\r\natypical antidepressants\r\nselective serotonin and norepinephrine reuptake inhibitors (SNRIs) "
+            ],
+            "context_set": [
+                ""
+            ]
+        }
+    ]
+}

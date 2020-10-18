@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block menu %}
+<li class="nav-item   ">
+            <a class="nav-link" href="{% url 'home'%}">
+              <i class="material-icons">dashboard</i>
+              <p>Home</p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="{% url 'diagnose'%}">
+              <i class="material-icons">content_paste</i>
+              <p>Diagnosis</p>
+            </a>
+          </li>
+          <li class="nav-item  ">
+            <a class="nav-link" href="{% url 'chat'%}">
+              <i class="material-icons">bubble_chart</i>
+              <p>Talk to Nishbot</p>
+            </a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="{% url 'map'%}">
+              <i class="material-icons">location_ons</i>
+              <p>Nearby help centres</p>
+            </a>
+          </li>
+{% endblock menu %}
+{% block content %}
+
+
+{% endblock content %}
